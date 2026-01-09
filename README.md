@@ -5,6 +5,8 @@
 ## Overview
 This repository documents the architectural patterns for building a **Natural Language Data Interface**. The core challenge addressed here is the tension between **Generative AI** (which is probabilistic and creative) and **Database Operations** (which require deterministic, exact accuracy).
 
+![Multi-Scenario Design](Image_4b5y0z4b5y0z4b5y.png)
+
 This solution decouples the user interface (Natural Language) from the execution logic, splitting the architecture into three distinct paths based on the *intent* of the user's question: **Insight**, **Exactness**, or **Prediction**.
 
 ## The Core Dilemma
@@ -82,7 +84,7 @@ For the **Exact** and **Prediction** paths, real-time querying of raw logs is pe
 
 As an evolution of the "Three Paths" model, this architecture introduces a **Router Pattern** and utilizes the **Model Context Protocol (MCP)** to standardize data access. This design shifts from a static logic flow to a dynamic, agentic workflow.
 
-![Multi-Agent MCP Architecture](https://github.com/user-attachments/assets/placeholder-for-new-diagram)
+![Multi-Agent MCP Architecture](Image_y9cyphy9cyphy9cy.png)
 
 ### 1. The Orchestrator (Router Agent)
 Instead of hard-coded logic flows, a top-level **Orchestrator Agent** acts as the front-line interface.
